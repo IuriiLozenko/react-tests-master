@@ -6,6 +6,7 @@ function HomePage() {
     <div className="App">
       <PageTitle title="Home Page" />
       <p>Not much here yet!</p>
+      <p>link</p>
     </div>
   );
 }
