@@ -11,9 +11,8 @@ test('album data has been fetched properly', async () => {
 
     const loader = screen.getByLabelText('loading...')
     expect(loader).toBeInTheDocument()
-    // console.log(loader)
+
     await waitForElementToBeRemoved(loader)
-    // await screen.findAllByTestId('album')
-    expect(await screen.findByText(/the greatest hits/i)).toBeInTheDocument()
-    expect(screen.getByText(/the greatest hits/i)).toBeInTheDocument()
+    // expect(await screen.findByText(/The greatest hits/i)).toBeInTheDocument()
+    expect(screen.getByText('The greatest hits')).toBeInTheDocument()
 })
