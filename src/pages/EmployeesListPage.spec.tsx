@@ -13,9 +13,8 @@ test('employee data has been fetch properly', async () => {
             <EmployeesListPage />
         </BrowserRouter>,
     )
-    const loader2 = screen.getByTestId('loader')
+    expect(screen.getByText(/employee list/i)).toBeInTheDocument()
     const loader = screen.getByLabelText('loading...')
-    expect(loader2).toBeInTheDocument()
     expect(loader).toBeInTheDocument()
     await waitForElementToBeRemoved(loader)
     expect(screen.getByText(/john doe/i)).toBeInTheDocument()
