@@ -4,12 +4,12 @@ import userEvent from '@testing-library/user-event'
 
 test('click to the button redirect', () => {
     render(<ClickCounter />)
-    const btn = screen.getByText(/click me/i)
-    expect(btn).toBeInTheDocument()
+    const button = screen.getByText(/click me/i)
+    expect(button).toBeInTheDocument()
 
-    expect(screen.getByText(/click me 0/i)).toBeInTheDocument()
-
-    userEvent.click(btn)
-
+    userEvent.click(button)
     expect(screen.getByText(/click me 1/i)).toBeInTheDocument()
+
+    userEvent.dblClick(button)
+    expect(screen.getByText(/click me 3/i)).toBeInTheDocument()
 })
