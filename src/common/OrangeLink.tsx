@@ -7,7 +7,7 @@ const style = {
 
 const OrangeLink = (props: LinkProps) => {
   return (
-    <Link {...props} style={style}>
+    <Link  aria-label = 'link' {...props} style={style}>
       {props.children}
     </Link>
   );
