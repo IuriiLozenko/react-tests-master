@@ -11,9 +11,7 @@ describe('example test', () => {
         cy.visit('http://localhost:3000')
         cy.contains('Not much here yet!')
         cy.get('.employeeLink').click()
-        cy.findByRole('link', {
-            name: new RegExp('contact2', 'i'),
-        }).click()
+        cy.get('.contactLink2').click()
         cy.get('[for="name"]').type('test')
         cy.get('[for="surname"]').type('test')
         cy.get('[data-testid="reset"]').click()
