@@ -42,6 +42,9 @@ const NavBar = () => {
                 <li>
                     <OrangeLink to="/our-albums">our albums</OrangeLink>
                 </li>
+                <li>
+                    <OrangeLink to="/todo">Todo</OrangeLink>
+                </li>
             </ul>
         </nav>
     )

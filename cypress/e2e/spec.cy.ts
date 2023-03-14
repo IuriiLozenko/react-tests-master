@@ -19,4 +19,11 @@ describe('example test', () => {
         cy.get('[for="surname"]').type('test')
         cy.get('[type="submit"]').click()
     })
+    it('check layout page', () => {
+        cy.visit('http://localhost:3000')
+        cy.contains('Not much here yet!')
+        cy.get('.layout').click()
+        cy.contains('Layout demo')
+        // cy.get()
+    })
 })
